@@ -5042,7 +5042,7 @@ static int my_fuse_opt_proc(void* data, const char* arg, int key, struct fuse_ar
                 // if bucket is public(without credential), s3 do not allow copy api.
                 // so s3fs sets nocopyapi mode.
                 //
-                nocopyapi = true;
+                nocopyapi = false;
             }else if(0 == pubbucket){
                 S3fsCurl::SetPublicBucket(false);
             }else{
